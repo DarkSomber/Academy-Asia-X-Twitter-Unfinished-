@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" href="icons8-x-48.png" type="image/x-icon">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <title>X. It's what's Happening / X</title>
 </head>
 
@@ -13,7 +13,7 @@
         <div class="weblogo">
             <img src="icons8-x-512.png" class="xlogo">
         </div>
-    
+
         <div class="front">
             <div class="logins">
                 <div class="central">
@@ -42,15 +42,17 @@
                 </div>
                 <div class="shortmessage">
                     <span>
-                        By signing up, you agree to the <a class="bluelink" href="https://x.com/tos">Terms of Service</a>
+                        By signing up, you agree to the <a class="bluelink" href="https://x.com/tos">Terms of
+                            Service</a>
                         and
-                        <a class="bluelink" href="https://x.com/privacy">Privacy Policy</a>, including <a class="bluelink"
-                            href="https://help.x.com/rules-and-policies/twitter-cookies">Cookie Use.</a>
+                        <a class="bluelink" href="https://x.com/privacy">Privacy Policy</a>, including <a
+                            class="bluelink" href="https://help.x.com/rules-and-policies/twitter-cookies">Cookie
+                            Use.</a>
                     </span>
                 </div>
                 <div class="alreadyhaveaccount">
                     <span class="shotmessage2">Already have an account?</span>
-                    <button class="signinbutton">
+                    <button class="signinbutton-front">
                         <span class="signin">Sign in</span>
                     </button>
                 </div>
@@ -118,9 +120,9 @@
         </div>
     </div>
 
-    <div class="popup">
+    <div id="loginpopup" class="popup">
         <header>
-            <div class="close-btn"><span class="x">&times;</span></div>
+            <div class="close-btn" id="closePopupBtn"><span class="x">&times;</span></div>
             <img src="icons8-x-32.png" class="x-logo">
         </header>
         <h2 style="text-align: left; margin-left: 7rem; width: fit-content;;">Sign in to X</h2>
@@ -144,9 +146,11 @@
                 <input type="text" id="password" placeholder="Phone, email, username" class="phone-email-username">
             </div>
         </div>
-        <button class="next-button">
-            <p class="loginnext">Next</p>
-        </button>
+        <a href="twitter.html" class="next-button">
+            <button class="next-button">
+                <p class="loginnext">Login</p>
+            </button>
+        </a>
         <button class="forgot-button">
             <p class="forgotpassword">Forgot password?</p>
         </button>
@@ -155,6 +159,7 @@
             <p class="text-signup">Don't have an account? <a class="bluelink">Sign up?</a></p>
         </div>
     </div>
+    <script src="java.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,10 @@
-/*
-* {
-    outline: 2px solid limegreen;
-} */
-
 @font-face {
     font-family: TwitterChirp;
     src: url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.3a18e64a.woff2) format('woff2'), url(https://abs.twimg.com/responsive-web/client-web/Chirp-Light.7a5673aa.woff) format('woff');
     font-weight: 300;
-    font-style: 'normal';
-    font-display: 'swap';
+    font-style: normal;
+    font-display: swap;
 }
-  
 
 body {
     font-family: "TwitterChirpExtendedHeavy", "Verdana", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -20,15 +14,15 @@ body {
 }
 
 .layout-page {
-    opacity: 25%;
+    opacity: 1;
 }
 
-/*X Logo*/
 
+/* Logo */
 .weblogo {
     min-height: 45vh;
     justify-content: center;
-    padding: 0%;
+    padding: 0;
     overflow: none;
     display: flex;
     flex: 1;
@@ -43,11 +37,10 @@ body {
 }
 
 .xlogo {
-    margin-top: 0%;
+    margin-top: 0;
 }
 
-/*Login Side*/
-
+/* Login Side */
 .message {
     font-size: 64px;
     margin-bottom: 15%;
@@ -73,8 +66,7 @@ body {
     color-scheme: dark;
 }
 
-/*Login Buttons*/
-
+/* Login Buttons */
 .logins {
     position: relative;
     left: 50%;
@@ -82,7 +74,8 @@ body {
     width: 300px;
 }
 
-.loginbutton {
+.loginbutton,
+.next-button {
     min-width: 36px;
     min-height: 36px;
     background-color: aliceblue;
@@ -93,13 +86,34 @@ body {
     width: 300px;
     height: 40px;
     border: none;
-}
-
-.loginbutton:hover {
     cursor: pointer;
 }
 
-.loginbutton:active {
+.createaccount {
+    min-width: 36px;
+    min-height: 36px;
+    background-color: rgb(29, 155, 240);
+    border-radius: 40px;
+    margin-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.loginbutton:hover,
+.createaccount:hover,
+.next-button:hover,
+.forgot-button:hover {
+    cursor: pointer;
+}
+
+.loginbutton:active,
+.createaccount:active,
+.next-button:active,
+.forgot-button:active {
     opacity: 70%;
 }
 
@@ -135,23 +149,9 @@ body {
     margin: 0 10px;
 }
 
-/*Create Message*/
-
+/* Create Account Button */
 .createaccount-div {
     margin-top: 5%;
-}
-
-.createaccount {
-    min-width: 36px;
-    min-height: 36px;
-    background-color: rgb(29, 155, 240);
-    border-radius: 40px;
-    margin-right: 20px;
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 300px;
-    height: 40px;
-    border: none;
 }
 
 .createmessage {
@@ -159,28 +159,18 @@ body {
     font-weight: 700;
 }
 
-.createaccount:hover {
-    cursor: pointer;
-}
-
-.createaccount:active {
-    opacity: 70%;
-}
-
-/*Short Message*/
-
+/* Short Message */
 .shortmessage {
     font-size: 10px;
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 50px;
     color: grey;
-    max-width: 380;
+    max-width: 380px;
     width: 340px;
     word-wrap: break-word;
     text-decoration: none;
     line-height: 10px;
-    flex-shrink: 1;
     font-size-adjust: none;
 }
 
@@ -198,31 +188,25 @@ body {
     opacity: 80%;
 }
 
-/*Sign in Button*/
-
 .shortmessage2 {
     font-weight: 400;
 }
 
-.signinbutton {
+.signinbutton, .signinbutton-front {
     margin-top: 20px;
     min-width: 36px;
     min-height: 36px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 40px;
-    margin-right: 20px;
     padding-left: 16px;
     padding-right: 16px;
     width: 300px;
     height: 40px;
     border: solid 1px lightblue;
-}
-
-.signinbutton:hover {
     cursor: pointer;
 }
 
-.signinbutton:active {
+.signinbutton:active, .signinbutton-front:active {
     opacity: 70%;
 }
 
@@ -231,28 +215,18 @@ body {
     color: rgb(29, 155, 240);
 }
 
-/*miscellaneous*/
-
+/* Miscellaneous */
 .miscellaneous {
     position: absolute;
     margin-left: 5%;
-    bottom: 0%;
+    bottom: 0;
     line-height: 16px;
     min-width: 0;
     word-wrap: break-word;
     justify-content: center;
 }
 
-.textlink {
-    color: rgb(113, 118, 123);
-    font-size: 13px;
-    text-decoration: none;
-    font-weight: 400;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    padding-right: 16px;
-}
-
+.textlink,
 .textafterlinks {
     color: rgb(113, 118, 123);
     font-size: 13px;
@@ -263,7 +237,8 @@ body {
     padding-right: 16px;
 }
 
-.textlink:hover {
+.textlink:hover,
+.textafterlinks:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -273,16 +248,12 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 12px;
     align-items: stretch;
     line-height: 13px;
 }
 
-/*pop up*/
-
+/* Popup */
 .popup {
     min-height: 400px;
     min-width: 600px;
@@ -298,55 +269,34 @@ body {
     background-color: black;
     box-sizing: border-box;
     display: flex;
-    flex-basis: auto;
     flex-direction: column;
     top: 8rem;
     border: 2px solid whitesmoke;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    opacity: 0;
+    transform: translate(-50rem, -50rem);
+}
+
+.popup.active {
+    opacity: 1;
+    top: 8rem;
+    transform: scale(1);
 }
 
 .form {
     justify-self: center;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 40px;
 }
 
 .signincompany {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.signinbutton {
-    min-width: 36px;
-    min-height: 36px;
-    background-color: aliceblue;
-    width: 300px;
-    height: 40px;
-    border: none;
-    margin: 0;
-    margin-bottom: 20px ;
-}
-
-
-.signinbutton:hover {
-    cursor: pointer;
-}
-
-.signinbutton:active {
-    opacity: 70%;
-}
-
-.signinlogo {
-    display: flex;
-    left: 20%;
-    top: 25%;
-    position: relative;
-    height: 20px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 .close-btn {
@@ -363,11 +313,6 @@ body {
     cursor: pointer;
     opacity: 25%;
     background-color: aliceblue;
-}
-
-.x {
-    position: relative;
-    margin: auto;
 }
 
 .x-logo {
@@ -402,6 +347,19 @@ header {
     margin-bottom: 20px;
 }
 
+.forgot-button {
+    min-width: 36px;
+    min-height: 36px;
+    background-color: black;
+    width: 300px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid 1px grey;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .loginnext {
     font-weight: 700;
     color: rgb(14, 13, 13);
@@ -409,10 +367,22 @@ header {
     margin: auto;
 }
 
-.next-button:hover {
-    cursor: pointer;
+.forgotpassword {
+    font-weight: 700;
+    color: aliceblue;
+    font-size: 14px;
+    margin: auto;
 }
 
-.next-button:active {
-    opacity: 75%;
+.signupmessage {
+    color: grey;
+    align-self: left;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.text-signup {
+    color: grey;
+    font-size: 11px;
+    line-height: 12px;
 }
